@@ -9,3 +9,9 @@ function getComputerChoice(){
         return "SCISSORS";
     }
 }
+
+function getPlayerChoice(){
+    let playerOptions = prompt("Pick up your weapon: ROCK, PAPER or SCISSORS.");
+    return playerOptions.toUpperCase();
+}
+
