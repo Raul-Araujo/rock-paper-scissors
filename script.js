@@ -40,9 +40,26 @@ function playRound(playerSelection, computerSelection){
 }
 
 function game(){
+    let playerPoints = 0;
+    let computerPoints = 0;
+
     for (i=0; i < 5; i++){
+
         const playerSelection = getPlayerChoice();
         const computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
+        
+
+            if (playRound(playerSelection, computerSelection) == "You beat computer!"){
+                playerPoints++;
+                alert("Player's selection: " + playerSelection + "   Computer's selection: " + computerSelection + "\n\n One point to our player. " );
+            } else {
+                computerPoints++;
+                alert( "Computer's selection: " + computerSelection + " Player's selection: " + playerSelection  + " \n\nOne more point to the computer. " );
+            }
+        
+            
+
+
     }
+    alert("Player's points: " + playerPoints + "   (VS)   Computer's points: " + computerPoints + (playerPoints > computerPoints ? "\n\n You just beat a computer" : "\n\nYou loose."));
 }
